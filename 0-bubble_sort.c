@@ -9,11 +9,11 @@
 */
 void swap_ints(int *n1, int *n2)
 {
-	int temp;
+int temp;
 
-	temp = *n1;
-	*n1 = *n2;
-	*n2 = temp;
+temp = *n1;
+*n1 = *n2;
+*n2 = temp;
 }
 
 /**
@@ -26,24 +26,24 @@ void swap_ints(int *n1, int *n2)
 */
 void bubble_sort(int *array, size_t size)
 {
-	size_t n, length = size;
-	bool bud = false;
+size_t n, length = size;
+bool bud = false;
 
-	if (array == NULL || size < 2)
-		return;
+if (array == NULL || size < 2)
+return;
 
-	while (bud == false)
-	{
-		bud = true;
-		for (n = 0; n < length - 1; n++)
-		{
-			if (array[n] > array[n + 1])
-			{
-				swap_ints(array + n, array + n + 1);
-				print_array(array, size);
-				bud = false;
-			}
-		}
-		length--;
-	}
+while (bud == false)
+{
+bud = true;
+for (n = 0; n < length - 1; n++)
+{
+if (array[n] > array[n + 1])
+{
+swap_ints(array + n, array + n + 1);
+print_array(array, size);
+bud = false;
+}
+}
+length--;
+}
 }
